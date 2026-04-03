@@ -1,6 +1,6 @@
 # AthensBusApp (about)
 
-A mobile application developed by GiannisClipper, written in React Native and powered by OASA telematics API. An independent initiative, not associated with OASA organization, for practicing and demonstration purposes. A presentation (as well as a link to download .apk to install on android devices) can be found here: https://giannisclipper.github.io/athens-bus-app
+A mobile application developed by GiannisClipper, written in React Native and powered by OASA telematics API. An independent initiative, not associated with OASA organization, for practicing and demonstration purposes. A presentation (as well as a link to download .apk to install on android devices) can be found here: https://github.com/aquacommander/AthensBusApp
 
 </br></br>
 
@@ -21,13 +21,14 @@ A mobile application developed by GiannisClipper, written in React Native and po
 
 ../AthensBusApp/git init
 
-../AthensBusApp/git pull https://github.com/GiannisClipper/AthensBusApp.git
+../AthensBusApp/git add .
+../AthensBusApp/git pull 
 
 ../AthensBusApp/git add .
 
 ../AthensBusApp/git commit -m "Initialize the project."
 
-../AthensBusApp/git remote add origin https://github.com/GiannisClipper/AthensBusApp.git
+../AthensBusApp/git remote add origin hhttps://github.com/aquacommander/AthensBusApp
 
 ../AthensBusApp/git push --set-upstream origin main
 
@@ -49,7 +50,7 @@ first install typescript:
 
 -- Change app's icon (for android)
 
-Create the icon here: http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=image&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba%2896%2C%20125%2C%20139%2C%200%29&backColor=rgb%28255%2C%20255%2C%20255%29&crop=0&backgroundShape=square&effects=none&name=ic_launcher
+Create the icon here: https://github.com/aquacommander/AthensBusApp launcher.html#foreground.type=image&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba%2896%2C%20125%2C%20139%2C%200%29&backColor=rgb%28255%2C%20255%2C%20255%29&crop=0&backgroundShape=square&effects=none&name=ic_launcher
 
 Download the created icon as a zip file and copy the files from the minmap-* directories to ../AthensBusApp/android/app/src/main/res/minmap-* directories
 
@@ -63,15 +64,11 @@ First could set the version in ../AthensBusApp/android/app/build.gradle (ex. ver
 Generated APK: ../AthensBusApp/android/app/build/outputs/apk/app-release.apk
 
 
--- HTTP request limitation (https://stackoverflow.com/questions/63045011/i-can-not-get-http-request-to-work-on-android-10-api-29-or-api-30-it-does-work)
+-- HTTP request limitation 
 
-Since Android 10 doesn't allow you to access external URL which is note secured with https://.
+Since Android 10 doesn't allow you to access external URL which is note secured with 
 Now you have 2 solutions to overcome this issue:
 Install SSL on your web server domain to make it https:// (recommended)
 Add android:usesCleartextTraffic="true" in your manifest inside <application> tag
 NOTE: If you go for 2nd option and upload your signed APK to play store it may get rejected due to security issues.
 
-
--- To fix the issue where the yellow background not displayed in Android 10 (dark theme), add in ../AthensBusApp/android/app/src/main/res/values/styles.xml: <item name="android:forceDarkAllowed">false</item>
-
-More details: https://stackoverflow.com/a/64339016/3156644 (Dark theme is available in Android 10 (API level 29) and higher. And most likely this feature ruined your app design implementation, like SVG, font, and background colors...)

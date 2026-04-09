@@ -12,8 +12,6 @@ A mobile application developed by GiannisClipper, written in React Native and po
 
 ../react-native init AthensBusApp
 
-../AthensBusApp/react-native run-android
-
 
 -- Initialize the repository:
 

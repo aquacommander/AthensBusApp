@@ -8,8 +8,7 @@ A mobile application developed by GiannisClipper, written in React Native and po
 
 -- Initialize the project:
 
-(install Node, React Native command line interface, Python2, JDK, and Android Studio, detailed nstructions: https://www.javatpoint.com/react-native-environment-setup)
-
+(install Node, React Native command line interface, Python2, JDK, and Android Studio, detailed nstructions
 ../react-native init AthensBusApp
 
 
